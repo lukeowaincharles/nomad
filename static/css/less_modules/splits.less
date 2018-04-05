@@ -1,0 +1,69 @@
+.area__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .area {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+
+        &.left {
+            left: 0;
+            padding: 20px;
+            &:before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: transparent;
+            }
+
+        }
+        &.right {
+            right: 0;
+            background-size: cover;
+            &:before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #EEE;
+                opacity: .4;
+            }
+        }
+    }
+    .area.left, .area.right, .area.right:before, .area.left:before {
+        transition: 1s all ease-in-out;
+    }
+}
+
+// Hover on left side
+.hover-left .left {
+    width: 75%;
+}
+.hover-left .right {
+    width: 25%;
+}
+.hover-left .right:before {
+    z-index: 2;
+}
+
+// Hover on right side
+.hover-right .right {
+    width: 65%;
+    /*transform: scale(1.1);*/
+    z-index: 3;
+}
+.hover-right .left {
+    width: 35%;
+}
+.hover-right .area.left:before {
+    z-index: 2;
+    background: #fff;
+    opacity: .7;
+}
+.hover-right .area.right:before {
+    opacity: 0;
+}
