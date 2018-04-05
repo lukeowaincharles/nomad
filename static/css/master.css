@@ -450,6 +450,56 @@
 .hover-right .area.right:before {
   opacity: 0;
 }
+.nav__btn {
+  position: absolute;
+  top: 5px;
+  padding: 8px 20px 8px 0px;
+  right: 0px;
+  z-index: 5;
+  display: block;
+  cursor: pointer;
+}
+.nav__btn span,
+.nav__btn span:before,
+.nav__btn span:after {
+  cursor: pointer;
+  height: 1px;
+  width: 20px;
+  background: #333;
+  content: '';
+  position: absolute;
+  display: block;
+  transition: all 300ms ease-in-out;
+}
+.nav__btn span:before {
+  top: -5px;
+}
+.nav__btn span:after {
+  bottom: -5px;
+}
+.nav__btn:hover span {
+  background: transparent;
+}
+.nav__btn:hover span:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+.nav__btn:hover span:after {
+  bottom: 0;
+}
+.nav__btn.active span {
+  background: transparent;
+}
+.nav__btn.active span:before,
+.nav__btn.active span:after {
+  top: 0;
+}
+.nav__btn.active span:before {
+  transform: rotate(45deg);
+}
+.nav__btn.active span:after {
+  transform: rotate(-45deg);
+}
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
@@ -530,6 +580,9 @@ h6 {
 ul {
   list-style: none;
   padding-left: 0;
+}
+.masthead {
+  position: relative;
 }
 /*Simple reset*/
 * {
