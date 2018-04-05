@@ -16,9 +16,9 @@
             <section class="area left">
                 <div class="masthead">
                     <p class="web__title">Luke Owain Charles</p>
-                    <nav>
-
-                    </nav>
+                    <div class="nav__btn" id="nav__btn">
+                        <span></span>
+                    </div>
                 </div>
                 <main>
                     <div class="content__wrapper">
@@ -39,6 +39,16 @@
             </div>
         </section>
 </div>
+        
+        <div class="menu" id="menu">
+            <ul class="menu__list" id="menu__list">
+                <li class="menu__list--item"><a href="#">About</a></li>
+                <li class="menu__list--item"><a href="#">Weddings</a></li>
+                <li class="menu__list--item"><a href="#">Travel</a></li>
+                <li class="menu__list--item"><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        
         <script src="./static/js/broozr.js"></script>
         <script src="./static/js/modernizr-custom.js"></script>
         <script src="./static/js/master.js"></script>
