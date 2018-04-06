@@ -2,23 +2,33 @@
 
 
 const doc = document;
+const x = window.matchMedia("(min-width: 992px)");
 const right = doc.querySelector(".right");
 const left = doc.querySelector(".left");
 const container = doc.querySelector(".area__container");
 const hiddenMessage = doc.querySelector(".hidden__message");
 
-right.addEventListener("click", () => {
-    container.classList.add("hover-right");
-    hiddenMessage.style.opacity = 0;
-});
+function imageChange(x) {
+    if (x.matches) {
+        right.addEventListener("click", () => {
+            container.classList.add("hover-right");
+            hiddenMessage.style.opacity = 0;
+        });
 
-right.addEventListener("mouseleave", () => {
-    container.classList.remove("hover-right");
-    hiddenMessage.style.opacity = 0;
-});
-right.addEventListener("mouseenter", () => {
-    hiddenMessage.style.opacity = 1;
-});
+        right.addEventListener("mouseleave", () => {
+            container.classList.remove("hover-right");
+            hiddenMessage.style.opacity = 0;
+        });
+        right.addEventListener("mouseenter", () => {
+            hiddenMessage.style.opacity = 1;
+        });
+    } else {
+        
+    }
+}
+imageChange(x);
+x.addListener(imageChange);
+
 
 (function ($) {
     $("#nav__btn").click(function () {
