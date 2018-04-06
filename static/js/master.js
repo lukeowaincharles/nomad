@@ -26,12 +26,14 @@ right.addEventListener("mouseenter", () => {
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
             $("body").removeClass("menu__active");
-
+            $(".content__wrapper").css("opacity", "1");
+            $(".web__title a").css("color", "#636363");
             $(".menu").removeClass("visible").delay(100).fadeOut();
         } else {
             $(this).addClass("active");
             $("body").addClass("menu__active");
-
+            $(".content__wrapper").css("opacity", ".1");
+            $(".web__title a").css("color", "#fff");
             $(".menu").addClass("visible").delay(100).fadeIn();
         }
     });
