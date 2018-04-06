@@ -15,7 +15,7 @@
         <div class="area__container">
             <section class="area left">
                 <div class="masthead">
-                    <p class="web__title">Luke Owain Charles</p>
+                    <p class="web__title"><a href="/">Luke Owain Charles</a></p>
                     <div class="nav__btn" id="nav__btn">
                         <span></span>
                     </div>
@@ -28,11 +28,14 @@
                             In eget ligula lacus. Aliquam cursus felis a libero condimentum porta. Vivamus eget eros odio. Aliquam varius ipsum ut felis facilisis, non tincidunt elit condimentum. Suspendisse id viverra eros. Curabitur rhoncus enim non malesuada efficitur. Curabitur faucibus elit vel dignissim commodo. Aenean scelerisque augue lorem, in molestie dui fermentum ut.</p>
                     </div>
                 </main>
+                <footer>
+                <p>&COPY; <?php echo date("Y"); ?> Luke Owain Charles. All Rights Reserved.</p>
+            </footer>
             </section>
         
         <section class="area right">
             <div class="main__image__wrapper">
-                <p class="hidden__message">Click me!</p>
+                <p class="hidden__message">Click me</p>
                 <img src="./static/img/tintagel-320w.jpg" 
                      srcset="./static/img/tintagel-800w.jpg 800w, ./static/img/tintagel-1600w.jpg 1600w"
                      sizes="(min-width: 992px) 1600px, (min-width: 768px) 800px"
@@ -43,7 +46,7 @@
         
         <div class="menu" id="menu">
             <ul class="menu__list" id="menu__list">
-                <li class="menu__list--item"><a href="#">About</a></li>
+                <li class="menu__list--item current__page"><a href="#">About</a></li>
                 <li class="menu__list--item"><a href="#">Weddings</a></li>
                 <li class="menu__list--item"><a href="#">Travel</a></li>
                 <li class="menu__list--item"><a href="#">Blog</a></li>
