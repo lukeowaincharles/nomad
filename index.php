@@ -32,6 +32,7 @@
         
         <section class="area right">
             <div class="main__image__wrapper">
+                <p class="hidden__message">Click me!</p>
                 <img src="./static/img/tintagel-320w.jpg" 
                      srcset="./static/img/tintagel-800w.jpg 800w, ./static/img/tintagel-1600w.jpg 1600w"
                      sizes="(min-width: 992px) 1600px, (min-width: 768px) 800px"
@@ -51,6 +52,7 @@
         
         <script src="./static/js/broozr.js"></script>
         <script src="./static/js/modernizr-custom.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="./static/js/master.js"></script>
     </body>
 </html>
