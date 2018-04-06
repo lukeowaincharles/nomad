@@ -12,6 +12,9 @@
         &.left {
             left: 0;
             padding: 20px;
+            @media @desktop {
+                padding: 20px 69px 20px 69px;
+            }
             &:before {
                 position: absolute;
                 content: "";
@@ -19,21 +22,68 @@
                 height: 100%;
                 background: transparent;
             }
+            .web__title {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                a {
+                    transition: all 300ms ease-in-out;
+                    color: @color-primary-1;
+                    &:active, &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .content__wrapper {
+                padding-top: 30px;
+                transition: all 300ms ease-in-out;
+                @media @desktop {
+                    padding-top: 60px;
 
+                }
+                h1 {
+                    @media @desktop {
+                        font-size: 65px;
+                    }
+                }
+                p {
+                    @media @tablet {
+                        padding: 20px 0 45px 20px;
+                        border-left: 1px solid @color-grey-15;
+                        border-bottom: 1px solid @color-grey-15;
+                    }
+                }
+            }
+            footer {
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                .transform(translateX(-50%));
+                p {
+                    font-size: 10px;
+                }
+            }
         }
         &.right {
             right: 0;
             background-size: cover;
+            cursor: pointer;
             .hidden__message {
                 opacity: 0;
+                background: rgba(99,99,99,.3);
+                margin: 0;
+                padding: 10px;
+                box-shadow: rgba(0,0,0,.5) 3px 4px 5px;
                 position: absolute;
-                bottom: 35px;
+                border-radius: 5px;
+                bottom: 15%;
                 left: 50%;
-                .transform(translateX(-50%));
+                .transform(translateX(-50%)translateY(-50%));
                 transition: all 300ms ease-in-out;
                 color: #FFF;
-                font-size: 24px;
+                font-size: 10px;
                 cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
             }
             &:before {
                 position: absolute;
